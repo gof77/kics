@@ -58,7 +58,7 @@ const Form = styled.form`
     margin-top: 8px;
     margin-bottom: 8px;
   }
-  padding: 12px 4px;
+  padding: 4px 4px;
   border-radius: 4px;
   background-color: rgba(223,225,235, .4);
   border: 1px solid rgba(223,225,235, 1)

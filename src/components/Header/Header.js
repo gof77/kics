@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import config from 'config';
 import Logo from './logo';
 import Navigation from './navigation';
+import TopMenu from './TopMenu';
 import { ButtonIcon, DarkModeSwitch, SearchInput, Sidebar } from '../';
 import { HelpCircle, Menu, Search } from 'react-feather';
 import { useTheme } from 'emotion-theming';
@@ -42,11 +43,11 @@ const HeaderWrapper = styled.header`
   border: 0;
   display: ${(props) => (props.show ? 'flex' : 'none')};
   align-items: center;
-  box-shadow: 0 3px 8px 0 ${(props) => props.theme.header.shadow};
+  box-shadow: 0 1px 1px 0 ${(props) => props.theme.header.shadow};
   border-bottom: 1px solid ${(props) => props.theme.header.border};
   padding: 0px 0;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   z-index: 1;
   ${onTablet} {
     padding: 10px;
@@ -62,7 +63,7 @@ const TopNavigation = styled.div`
   margin-left: 55px;
   margin-right: 30px;
   flex: 1 1 auto;
-  padding: 10px 0;
+  padding: 2px 0;
   ${onTablet} {
     margin-left: 15px;
   }
@@ -217,6 +218,10 @@ const Header = ({ setShowSearch, location, themeProvider, show, toggleFullscreen
               link
               text
               external
+              submenus {
+                link
+                text
+              }
             }
           }
         }
@@ -278,7 +283,9 @@ const Header = ({ setShowSearch, location, themeProvider, show, toggleFullscreen
           <HeaderWrapper show={show}>
             <Logo link={logoLink} img={logoImg2} title={headerTitle} />
             <TopNavigation css={hiddenMobile}>
-              <Navigation links={headerLinks} />
+
+              <TopMenu links={headerLinks} />
+              
             </TopNavigation>
             <ButtonsWrapper>
               {isSearchEnabled ? (
@@ -308,13 +315,14 @@ const Header = ({ setShowSearch, location, themeProvider, show, toggleFullscreen
 
             {isMobile() ? (
               <MobileNavigation css={visibleMobile} show={menuOpen}>
-                <Sidebar location={location} show={true} />
+                
 
-                <Navigation links={headerLinks} />
+                <TopMenu links={headerLinks} />
 
                 <SocialButtonsWrapper css={visibleMobile}>
                   {SocialButtons(iconBaseProps, config.social)}
                 </SocialButtonsWrapper>
+                <Sidebar location={location} show={true} />
               </MobileNavigation>
             ) : (
               ''
