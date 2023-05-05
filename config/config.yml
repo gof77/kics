@@ -1,12 +1,12 @@
 ---
 metadata:
-  name: BooGi
-  short_name: BooGi
-  description: BooGi - awesome GitBook-like documentation generator using Gatsby
+  name: Gbook
+  short_name: Gbook
+  description: Gbook - awesome GitBook-like documentation for Risk and Acturary
   language: en
   pathPrefix: "/"
   siteImage:
-  favicon: "/assets/favicon.png"
+  favicon: "/assets/GofFavicon32.png"
   themeColor: "#ff0000"
 header:
   enabled: true
@@ -14,15 +14,20 @@ header:
   logoLink: "/"
   helpUrl: ""
   links:
-    - text: BooGi
+    - text: Gbook
       link: https://github.com/filipowm/boogi
       external: true
-    - text: Gatsby
+    - text: IFRS
       link: https://www.gatsbyjs.org
       external: true
-    - text: Docs
+    - text: References
       link: "/"
       external: false
+      submenus:
+        - text: GMV
+          link: "/"
+        - text: GESG
+          link: "/"
 sidebar:
   enabled: true
   # forcedNavOrder:
@@ -47,21 +52,21 @@ sidebar:
       path: "/developing"
       title: ":computer: Developing"
   links:
-    - text: BooGi
+    - text: GoF
       link: https://github.com/filipowm/boogi
     - text: React
       link: https://reactjs.org
   ignoreIndex: false
   poweredBy:
-    trademark: "/assets/gatsby.png"
-    name: GatsbyJS
-    link: https://www.gatsbyjs.org
+    trademark:
+    name: 
+    link: 
 pwa:
   enabled: true
   manifest:
     display: standalone
     crossOrigin: anonymous
-    icon: "/assets/favicon.png"
+    icon: "/assets/GofFavicon32.png"
 
 social:
   github: https://github.com/filipowm/boogi
@@ -96,7 +101,7 @@ features:
     arrowKeyNavigation: true
   propagateNetlifyEnv: true
   rss:
-    enabled: true
+    enabled: false
     title: BooGi Docs
     showIcon: false
     copyright: "2020, Mateusz Filipowicz"
