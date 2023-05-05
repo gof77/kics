@@ -10,8 +10,8 @@ metadata:
   themeColor: "#ff0000"
 header:
   enabled: true
-  logo: "/assets/code.svg"
-  logoLink: "/"
+  logo: "/assets/GoFwobg96.png"
+  logolink: "/"
   helpUrl: ""
   links:
     - text: Gbook
@@ -69,9 +69,9 @@ pwa:
     icon: "/assets/GofFavicon32.png"
 
 social:
-  github: https://github.com/filipowm/boogi
-  linkedin: https://www.linkedin.com/in/mateusz-filipowicz-437b4768/
-  twitter: twitter url
+  github: 
+  linkedin: 
+  twitter: 
 
 features:
   darkMode:

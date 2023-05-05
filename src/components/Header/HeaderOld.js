@@ -204,7 +204,7 @@ const SocialButtonsWrapper = styled.div`
 const Header = ({ setShowSearch, location, themeProvider, show, toggleFullscreenMode }) => (
   <StaticQuery
     query={graphql`
-      query headerTitleQuery {
+      query headerTitleQueryOld {
         site {
           siteMetadata {
             headerTitle
@@ -229,7 +229,7 @@ const Header = ({ setShowSearch, location, themeProvider, show, toggleFullscreen
         },
       } = data;
       const logoLink = logo.link !== '' ? logo.link : '/';
-      const logoImg2 = logo.image !== '' ? logo.image : '/image/logo.svg';
+      const logoImg = require('images/logo.svg');
       const [darkMode, setDarkMode] = useState(false);
       useEffect(() => {
         setDarkMode(themeProvider.current.retrieveActiveTheme());
@@ -276,7 +276,7 @@ const Header = ({ setShowSearch, location, themeProvider, show, toggleFullscreen
             ''
           )}
           <HeaderWrapper show={show}>
-            <Logo link={logoLink} img={logoImg2} title={headerTitle} />
+            <Logo link={logoLink} img={logoImg} title={headerTitle} />
             <TopNavigation css={hiddenMobile}>
               <Navigation links={headerLinks} />
             </TopNavigation>
