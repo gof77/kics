@@ -2,9 +2,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 import config from 'config';
 
 const getNavigationData = () => {
+  
+  // allMdx(filter: {fields: {slug: {regex: "/^kics"}, draft: {eq: false}}}) {
   const { allMdx } = useStaticQuery(graphql`
-    query NavigationQuery {
-      allMdx(filter: {fields: {draft: {ne: true}}}) {
+  query NavigationQuery {
+      allMdx(filter: {slug: {}, fields: {slug: {regex: "/^/kics/"}, draft: {eq: false}}}) {  
         edges {
           node {
             fields {
@@ -51,6 +53,7 @@ const calculateTreeDataForData = (contentData) => {
         }
         parents.push(v);
       });
+
       return {
         parent: parents.reverse(),
         label: label,
@@ -75,9 +78,13 @@ const calculateTreeDataForData = (contentData) => {
   let result = {
     __root: createUnassignedGroup(),
   };
+
   navigationItems.forEach((data) => {
     let isChild = false;
     let parent = null;
+
+    // console.log('navationItems' + data.url);
+    
     data.parent.every((p) => {
       parent = navigationItems.find((d) => d.url === p);
       if (parent) {
@@ -121,25 +128,32 @@ const calculateTreeDataForData = (contentData) => {
       group.children.push(data);
     }
   });
+  
   result = Object.values(result);
   result.sort(function (a, b) {
     const ordered = a.order - b.order;
     return ordered !== 0 ? ordered : a.title.localeCompare(b.title);
   });
+
+  // const zzz = result;
+  // console.log('rrrr' + JSON.stringify(zzz));
+
   return result;
 };
 
 const calculateNavigation = (edges) => {
   const contentData = config.sidebar.ignoreIndex
-    ? edges.filter(
-        ({
-          node: {
-            fields: { slug },
-          },
-        }) => slug !== '/'
-      )
+  ? edges.filter(
+    ({
+      node: {
+        fields: { slug },
+      },
+    }) => slug !== '/'
+    )
     : edges;
+
   const data = calculateTreeDataForData(contentData);
+     
   return {
     children: data,
   };
@@ -162,3 +176,5 @@ const calculateFlatNavigation = (edges) => {
 };
 
 export { getNavigationData, calculateNavigation, calculateFlatNavigation };
+
+

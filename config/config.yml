@@ -15,8 +15,8 @@ header:
   helpUrl: ""
   links:
     - text: Gbook
-      link: https://github.com/filipowm/boogi
-      external: true
+      link:  "/configuration/introduction"
+      external: false
     - text: IFRS
       link: https://www.gatsbyjs.org
       external: true
@@ -24,21 +24,24 @@ header:
       link: "/"
       external: false
       submenus:
+        - text: Kics
+          link: "/kics"
         - text: GMV
-          link: "/"
+          link: "/gmv"
         - text: GESG
-          link: "/"
+          link: "/gesg"
 sidebar:
   enabled: true
-  # forcedNavOrder:
-  #   - "/introduction"
-  #   - "/configuration/basic"
+  forcedNavOrder:
+      - "/kics"
+      - "/configuration/basic"
   #   - "/configuration/advanced"
-  # expanded:
+  #expanded:
+  #  - "/configuration/setting-up"
   groups:
     - order: 1
-      path: "/gettingstarted"
-      title: ":rocket: Getting Started"
+      path: "/kics/01-intro"
+      title: ":rocket: K-ICS 기준서"
     - order: 2
       path: "/configuration"
       title: ":wrench: Configuration"
@@ -51,6 +54,9 @@ sidebar:
     - order: 5
       path: "/developing"
       title: ":computer: Developing"
+    - order: 6
+      path: "/kics/02-valuaion"
+      title: ":computer: 공정가치 평가" 
   links:
     - text: GoF
       link: https://github.com/filipowm/boogi
@@ -80,7 +86,7 @@ features:
   editOnRepo:
     location: https://github.com/filipowm/boogi 
     type: github
-    editable: true
+    editable: false
   mermaid:
     language: "mermaid"
     theme: "dark"
@@ -116,7 +122,7 @@ features:
     generator: "boogi"
   scrollTop: true
   search:
-    enabled: true
+    enabled: false
     engine: 'algolia'
     placeholder: 'Search'
     startComponent: 'input' # icon

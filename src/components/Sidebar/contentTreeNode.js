@@ -91,6 +91,33 @@ const NestedContentTreeNode = styled(
   }
 `;
 
+const DoubleNestedContentTreeNode = styled(
+  ({ className, location, children, setCollapsed, collapsed }) => (
+    //<Slide top>
+    <ul className={className}>
+      {children.map((item) => (
+        <ContentTreeNode
+          key={item.url}
+          setCollapsed={setCollapsed}
+          collapsed={collapsed}
+          location={location}
+          {...item}
+        />
+      ))}
+    </ul>
+  )
+  //</Slide>
+)`
+  flex: 100%;
+  li {
+    margin-left: 24px;
+    border-left: 1px solid ${(props) => props.theme.navigationSidebar.font.nested};
+    a {
+      color: ${(props) => props.theme.navigationSidebar.font.nested};
+    }
+  }
+`;
+
 const NodeCollapseButton = styled(({ className, isCollapsed, collapse }) => {
   return (
     <button onClick={collapse} aria-label="collapse" className={className}>
