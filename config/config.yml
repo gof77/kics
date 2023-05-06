@@ -4,7 +4,7 @@ metadata:
   short_name: Gbook
   description: Gbook - awesome GitBook-like documentation for Risk and Acturary
   language: en
-  pathPrefix: "/"
+  pathPrefix: "/kics"
   siteImage:
   favicon: "/assets/GofFavicon32.png"
   themeColor: "#ff0000"
@@ -54,7 +54,7 @@ sidebar:
     - order: 5
       path: "/05-doc"
       title: ":computer: V.문서화"
-    - order: 5
+    - order: 6
       path: "/06-trans"
       title: ":computer: VI.경과규정"
   links:
