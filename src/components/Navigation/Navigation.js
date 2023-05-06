@@ -4,9 +4,10 @@ import config from 'config';
 const getNavigationData = () => {
   
   // allMdx(filter: {fields: {slug: {regex: "/^kics"}, draft: {eq: false}}}) {
+  // allMdx(filter: {slug: {}, fields: {slug: {regex: "/^/kics/"}, draft: {eq: false}}}) {  
   const { allMdx } = useStaticQuery(graphql`
   query NavigationQuery {
-      allMdx(filter: {slug: {}, fields: {slug: {regex: "/^/kics/"}, draft: {eq: false}}}) {  
+      allMdx(filter: {fields: {draft: {ne: true}}}) {  
         edges {
           node {
             fields {

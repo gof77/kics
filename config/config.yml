@@ -15,48 +15,48 @@ header:
   helpUrl: ""
   links:
     - text: Gbook
-      link:  "/configuration/introduction"
+      link:  https://gof77.github.io/gbook
       external: false
     - text: IFRS
-      link: https://www.gatsbyjs.org
+      link: https://gof77.github.io/ifrs
       external: true
     - text: References
       link: "/"
       external: false
       submenus:
         - text: Kics
-          link: "/kics"
-        - text: GMV
-          link: "/gmv"
+          link: "/"
+        - text: IFRS17
+          link: https://gof77.github.io/ifrs
         - text: GESG
-          link: "/gesg"
+          link: https://gof77.github.io/gesg
 sidebar:
   enabled: true
-  forcedNavOrder:
-      - "/kics"
-      - "/configuration/basic"
+  #forcedNavOrder:
+  #    - "/kics"
+  #    - "/configuration/basic"
   #   - "/configuration/advanced"
   #expanded:
   #  - "/configuration/setting-up"
   groups:
     - order: 1
-      path: "/kics/01-intro"
-      title: ":rocket: K-ICS 기준서"
+      path: "/01-intro"
+      title: ":rocket: I.총칙"
     - order: 2
-      path: "/configuration"
-      title: ":wrench: Configuration"
+      path: "/02-valuation"
+      title: ":wrench: II.공정가치 평가"
     - order: 3
-      path: "/editing"
-      title: ":writing_hand: Editing Content"
+      path: "/03-ac"
+      title: ":writing_hand: III.지급여력금액"
     - order: 4
-      path: "/deployment"
-      title: ":rocket: Deployment"
+      path: "/04-scr"
+      title: ":rocket: IV.지급여력기준금액"
     - order: 5
-      path: "/developing"
-      title: ":computer: Developing"
-    - order: 6
-      path: "/kics/02-valuaion"
-      title: ":computer: 공정가치 평가" 
+      path: "/05-doc"
+      title: ":computer: V.문서화"
+    - order: 5
+      path: "/06-trans"
+      title: ":computer: VI.경과규정"
   links:
     - text: GoF
       link: https://github.com/filipowm/boogi

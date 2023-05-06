@@ -35,7 +35,7 @@ const ContentLink = styled(({ className, link, children }) => (
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
-  padding: 8px 24px 8px 18px;
+  padding: 2px 10px 2px 18px;
   border-radius: 1px;
 `;
 
