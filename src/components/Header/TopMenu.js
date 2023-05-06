@@ -1,7 +1,7 @@
-import MenuItem from './MenuItem';
 import React from 'react';
 import styled from '@emotion/styled';
 import { onMobile } from '../../styles/responsive';
+import MenuItem from './MenuItem';
 
 
 

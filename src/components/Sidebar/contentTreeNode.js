@@ -141,7 +141,7 @@ const NodeCollapseButton = styled(({ className, isCollapsed, collapse }) => {
   }
 `;
 
-const ContentTreeNode = ({ className, toggle, collapsed, url, title, location, children }) => {
+const ContentTreeNode = ({ className, toggle, collapsed, nestedToggle, nestedCollapsed, url, title, location, children }) => {
   const hasChildren = children.length !== 0;
   const active =
     location &&
@@ -171,6 +171,7 @@ const ContentTreeNode = ({ className, toggle, collapsed, url, title, location, c
 
       {!isCollapsed ? (
         <NestedContentTreeNode collapsed={collapsed} location={location} setCollapsed={toggle}>
+
           {children}
         </NestedContentTreeNode>
       ) : null}
