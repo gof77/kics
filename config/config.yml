@@ -24,7 +24,7 @@ header:
       link: "/"
       external: false
       submenus:
-        - text: Kics
+        - text: KICS
           link: https://gof77.github.io/kics
         - text: IFRS17
           link: https://gof77.github.io/ifrs
@@ -78,6 +78,10 @@ sidebar:
 pwa:
   enabled: true
   manifest:
+    name: Gbook
+    short_name: Gbook
+    background_color: "#37474F"
+    theme_color: "#37474F"
     display: standalone
     crossOrigin: anonymous
     icon: "/assets/GoF144.png"
