@@ -6,38 +6,38 @@ metadata:
   language: en
   pathPrefix: "/kics"
   siteImage:
-  favicon: "/assets/GofFavicon32.png"
+  favicon: "./assets/GofFavicon32.png"
   themeColor: "#37474F"
 header:
   enabled: true
-  logo: "/assets/GoFwobg96.png"
-  logolink: "/"
+  logo: "./assets/GoFwobg96.png"
+  logolink: https://www.gactuary.com
   helpUrl: ""
   links:
     - text: Gbook
-      link:  https://gof77.github.io/gbook
+      link:  https://www.gactuary.com
       external: false
     - text: IFRS
-      link: https://gof77.github.io/ifrs
+      link: https://www.gactuary.com/ifrs
       external: true
     - text: References
       link: "/"
       external: false
       submenus:
         - text: KICS
-          link: https://gof77.github.io/kics
+          link: https://www.gactuary.com/kics
         - text: IFRS17
-          link: https://gof77.github.io/ifrs
+          link: https://www.gactuary.com/ifrs
         - text: GESG
-          link: https://gof77.github.io/gesg
+          link: https://www.gactuary.com/gesg
     - text: Solutions
       link: "/"
       external: false
       submenus:
         - text: GMV
-          link: https://gof77.github.io/ifrs
+          link: https://www.gactuary.com/ifrs
         - text: GESG
-          link: https://gof77.github.io/gesg
+          link: https://www.gactuary.com/gesg
 sidebar:
   enabled: true
   #forcedNavOrder:
