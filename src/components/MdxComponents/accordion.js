@@ -23,7 +23,6 @@ margin: 10px 0;
         }
         &:hover {
             border: 1px solid ${(props) => props.theme.colors.primary};
-            background-color: #ffe8d6;
         }
         &:after {
             content: url('data:image/svg+xml; utf8, ${(props) => props.closedImg}');
@@ -36,12 +35,12 @@ margin: 10px 0;
         cursor: pointer;
         display: block;
         width: 100%;
-        background-color: #b7b7a4;
+        // background-color: #f5f5f5;
     }
 
     & > div > div {
         padding: 8px 16px;
-        background-color: #ffe8d6;
+        background-color: #ECECEC;
     }
 }
 `;
@@ -58,7 +57,7 @@ export default ({ title, titleWhenOpen, expanded, children, ...props }) => {
         lazyRender={true}
         // trigger={emoji.emojify(title)}
         // triggerWhenOpen={emoji.emojify(triggerWhenOpen)}
-        trigger={<span style={{ fontWeight: 'bold', fontStyle: 'italic', color: 'black' }}>{emoji.emojify(`✐ ( ${title} )`)}</span>}
+        trigger={<span style={{ fontWeight: 'bold', fontStyle: 'italic', color: 'teal' }}>{emoji.emojify(`✐ ( ${title} )`)}</span>}
         triggerWhenOpen={<span style={{ fontWeight: 'bold', fontStyle: 'italic', color: 'teal' }}>{emoji.emojify(triggerWhenOpen)}</span>}
         {...props}
       >
