@@ -3,6 +3,7 @@ title: "Term-III.지급여력금액"
 excerpt: "III.지급여력금액 산출에서 사용되는 용어를 정의한다."
 toc_depth: 1
 order: 2
+draft: true
 ---
 
 ### (1) 가용자본

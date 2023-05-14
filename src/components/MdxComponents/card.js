@@ -13,6 +13,7 @@ const Card = styled.div`
   border-radius: 4px;
   border: 1px solid transparent;
   transition: ${(props) => props.theme.transitions.hover};
+  background-color: #f1faee;
 `;
 
 export default ({ ...props }) => {

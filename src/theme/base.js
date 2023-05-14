@@ -18,7 +18,7 @@ const colors = {
 };
 
 const pageLayout = {
-  leftWidth: '318px',
+  leftWidth: '320px',
   leftMargin: '30px',
   rightWidth: '',
   rightMargin: '',
@@ -163,7 +163,7 @@ const tableOfContents = (colors) => ({
   background: colors.mainBackground,
   font: {
     base: decreaseIntensivity(colors.font, 0.15),
-    hover: colors.primary,
+    hover: colors.primaryDark,
     current: colors.primary,
   },
   border: colors.border,

@@ -3,6 +3,7 @@ title: "Term-IV.지급여력기준금액 산출"
 excerpt: "IV.지급여력기준금액 산출에서 사용되는 용어를 정의한다."
 toc_depth: 1
 order: 3
+draft: true
 ---
 
 ### (1) 생명·장기손해보험리스크
